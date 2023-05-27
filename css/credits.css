@@ -36,5 +36,6 @@ ul{
 }
 
 body{
-  background-image: linear-gradient(#a86800, #FFAA00);
+  background-image: url("https://images4.imagebam.com/c5/90/04/MELC9E2_o.png");
+  background-size: cover;
 }
