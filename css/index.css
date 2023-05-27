@@ -50,7 +50,7 @@ body {
     100% {
         stroke-dasharray: 0%;
         stroke-dashoffset: 0%;
-        fill: #9b9dad;
+        fill: #5200ff;
         filter: drop-shadow(2px 2px 10px #0007);
     }
 }
