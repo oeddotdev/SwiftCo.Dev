@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Lobster&family=Monomaniac+One&family=Righteous&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Monomaniac+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Lobster&family=Monomaniac+One&display=swap');
+
+h1{
+  font-family: 'Lobster', cursive;
+  text-align: center;
+}
+
+h2{
+ font-family: 'Audiowide', cursive; 
+}
+
+p{
+  font-family: 'Righteous', cursive;
+  text-align: center;
+}
+
+a{
+  font-family: 'Audiowide', cursive;
+  text-align: center;
+  color: #E9E8E2;
+}
+
+
+code{
+  font-family: 'Righteous', cursive;
+  text-align: center;
+}
+
+ul{
+  font-family: 'Righteous', cursive;
+  text-align: center;
+}
+
+body{
+  background-image: linear-gradient(#a86800, #FFAA00);
+  background-size: cover;
+}
