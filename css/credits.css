@@ -15,7 +15,8 @@ h1{
 }
 
 h2{
- font-family: 'Audiowide', cursive; 
+  font-family: 'Audiowide', cursive; 
+  text-align: center;
 }
 
 p{
@@ -41,6 +42,6 @@ ul{
 }
 
 body{
-  background-image: url("https://images4.imagebam.com/66/bf/7b/MELC9L7_o.png");
+  background-image: linear-gradient(#a86800, #FFAA00);
   background-size: cover;
 }
