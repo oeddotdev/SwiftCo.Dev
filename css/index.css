@@ -1,56 +1,93 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Raleway:wght@100&family=Righteous&family=Syncopate&display=swap');
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+	--primary-color: #3a4052;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    block-size: 100vh;
-    display: grid;
-    place-content: center;
-    gap: 1rem;
-    font-family: "Lato", sans-serif;
-    background-color: #efefef;
+	line-height: 1.5;
+  font-family: 'Raleway', sans-serif;
 }
 
-.text-container {
-    display: flex;
-    justify-content: center;
-    block-size: min(10rem, 23vw);
-    min-inline-size: 22.5rem;
+a {
+	text-decoration: none;
+	color: var(--primary-color);
 }
 
-.text-stroke {
-    font-size: 92px;
-    letter-spacing: 4px;
-    fill: none;
-    stroke: #000;
-    stroke-width: 2;
-    stroke-dasharray: 100%;
-    stroke-dashoffset: 100%;
-    animation: textStrokeAnim 4000ms linear both;
-    animation-iteration-count: 1;
+h1 {
+	font-weight: 300;
+	font-size: 200px;
+	line-height: 1.2;
+	margin-bottom: 15px;
+  font-family: 'Righteous', cursive;
 }
 
-@keyframes textStrokeAnim {
-    0% {
-        stroke-dasharray: 100%;
-        stroke-dashoffset: 100%;
-        fill: #0000;
-    }
-    95% {
-        stroke-dasharray: 0%;
-        stroke-dashoffset: 90%;
-        fill: #0000;
-    }
-    100% {
-        stroke-dasharray: 0%;
-        stroke-dashoffset: 0%;
-        fill: #5200ff;
-        filter: drop-shadow(2px 2px 10px #0007);
-    }
+.showcase {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+	padding: 0 20px;
 }
+
+.video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: var(--primary-color) url('./https://traversymedia.com/downloads/cover.jpg') no-repeat center
+		center/cover;
+}
+
+.video-container video {
+	min-width: 100%;
+	min-height: 100%;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
+
+.video-container:after {
+	content: '';
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+}
+
+.content {
+	z-index: 2;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 30px;
+	background: var(--primary-color);
+	color: #fff;
+	border-radius: 5px;
+	border: solid #fff 1px;
+	margin-top: 25px;
+	opacity: 0.7;
+  font-family: 'Audiowide', cursive;
+
+}
+
+.btn:hover {
+	transform: scale(1.5);
+}
+
