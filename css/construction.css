@@ -6,6 +6,11 @@
 	box-sizing: border-box;
 }
 
+img{
+ width: 3%;
+ height: 3%;
+}
+
 html,
 body {
 	height: 100%;
