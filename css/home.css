@@ -1,5 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Inconsolata';
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Raleway:wght@100&family=Righteous&family=Syncopate&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+
 html {
   min-height: 100%;
 }
@@ -10,13 +12,13 @@ body {
   background-color: #1C1C1C;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "Audiowide", cursive;
+  font-family: 'Nabla', cursive;
   font-size: 1.5rem;
   color: red;
 }
 
 h1 {
-  font-family: "Righteous", cursive;
+  font-family: 'Nabla', cursive;
 }
 
 .noise {
@@ -77,5 +79,5 @@ a::after {
 
 .errorcode {
   color: white;
-  font-family: "Righteous", cursive;
+  font-family: 'Nabla', cursive;
 }
