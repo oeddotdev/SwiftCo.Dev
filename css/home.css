@@ -1,83 +1,127 @@
-@import 'https://fonts.googleapis.com/css?family=Inconsolata';
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Raleway:wght@100&family=Righteous&family=Syncopate&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Raleway:wght@100&family=Righteous&family=Syncopate&display=swap');
 
 html {
-  min-height: 100%;
-}
-
-body {
-  box-sizing: border-box;
+  background: radial-gradient(#000, #111);
+  color: white;
+  overflow: hidden;
   height: 100%;
-  background-color: #1C1C1C;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: 'Audiowide', cursive;
-  font-size: 1.5rem;
-  color: #ff592c;
+  user-select: none;
 }
 
-h1 {
-  font-family: 'Nabla', cursive;
-}
-
-.noise {
-  pointer-events: none;
-  position: absolute;
+.static {
   width: 100%;
   height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
-  opacity: 0.02;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  top: -100px;
+  opacity: 0.05;
+  z-index: 230;
+  user-select: none;
+  user-drag: none;
 }
 
-.terminal {
-  box-sizing: inherit;
+.error {
+  text-align: center;
+  font-family: 'Righteous', cursive;
+  font-size: 100px;
+  font-style: italic;
+  text-align: center;
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
   position: absolute;
-  height: 100%;
-  width: 1000px;
-  max-width: 100%;
-  padding: 4rem;
-  text-transform: uppercase;
+  top: 0;
+  bottom: 0;
+  left: -60px;
+  right: 0;
+  animation: noise 2s linear infinite;
+  overflow: default;
 }
 
-.output {
+.error:after {
+  content: '404';
+  font-family: 'Gilda Display', serif;
+  font-size: 100px;
+  font-style: italic;
+  text-align: center;
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  color: blue;
+  animation: noise-1 .2s linear infinite;
+}
+
+.info {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 75px;
+  font-style: italic;
+  text-align: center;
+  width: 1750px;
+  height: 100px;
+  line-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: noise-3 1s linear infinite;
+}
+
+.error:before {
+  content: '404';
+  font-family: 'Gilda Display', serif;
+  font-size: 100px;
+  font-style: italic;
+  text-align: center;
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
   color: red;
-  text-shadow: 0 0 1px rgba(51, 255, 51, 0.4), 0 0 2px rgba(255, 255, 255, 0.8);
+  animation: noise-2 .2s linear infinite;
 }
 
-.output::before {
-  content: "> ";
+@keyframes noise-1 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: -6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: 2px;}
 }
 
-/*
-.input {
-  color: rgba(192, 255, 192, 0.8);
-  text-shadow:
-      0 0 1px rgba(51, 255, 51, 0.4),
-      0 0 2px rgba(255, 255, 255, 0.8);
+@keyframes noise-2 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: 6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: -2px;}
 }
 
-.input::before {
-  content: "$ ";
-}
-*/
-a {
-  color: #ffd214;
-  text-decoration: none;
-  font-family: "Audiowide", cursive;
+@keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; transform: scaleY(1);}  
+  4.3% {opacity: 1; transform: scaleY(1.7);}
+  43% {opacity: 1; transform: scaleX(1.5);}
 }
 
-a::before {
-  content: "[";
-}
-
-a::after {
-  content: "]";
-}
-
-.errorcode {
-  color: white;
-  font-family: 'Nabla', cursive;
+@keyframes noise-3 {
+  0%,3%,5%,42%,44%,100% {opacity: 1; transform: scaleY(1);}
+  4.3% {opacity: 1; transform: scaleY(4);}
+  43% {opacity: 1; transform: scaleX(10) rotate(60deg);}
 }
