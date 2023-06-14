@@ -21,6 +21,7 @@ body {
 	top: 0;
 	left: 0;
 	overflow: hidden;
+	text-align: center;
 }
 
 .main {
@@ -30,6 +31,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 }
 
 .contact {
@@ -37,6 +39,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 }
 
 .title {
@@ -44,6 +47,7 @@ body {
 	font-size: 4rem;
   margin-bottom: .5rem;
 	width: 100%;
+	text-align: center;
 }
 
 .sub-title {
