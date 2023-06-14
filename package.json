@@ -1,8 +1,0 @@
-{
-  "name": "ams-aware-swift",
-  "version": "1.0.0",
-  "author": "Swift <anthonyaware@pm.me>"
-  "dependencies": {
-    "swiper": "6.0.0"
-  }
-}
