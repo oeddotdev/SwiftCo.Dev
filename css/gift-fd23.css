@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@600&display=swap');
+ body {
+	 width: 100%;
+	 margin: 0;
+}
+ section {
+	 width: 100%;
+	 height: 800px;
+	 background-position: center center;
+	 background-size: 80% auto;
+	 background-attachment: fixed;
+	 background-repeat: no-repeat;
+}
+ @media (min-width: 700px) {
+	 section {
+		 background-size: auto 80%;
+	}
+}
+ #a1 {
+	 background-color: #fbfeab;
+	 background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/219932/happy-fathers-day-lettering-optimized-1.svg);
+	 text-align: center;
+	 text-transform: uppercase;
+	 font-family: monaco;
+}
+ #a1 p {
+	 margin: 0;
+	 padding: 20px 0;
+	 color: tan;
+	 letter-spacing: 10px;
+	 text-align: center;
+	 font-family: 'Foldit', cursive;
+}
+ #a2 {
+	 background-color: #b8e2df;
+	 background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/219932/happy-fathers-day-lettering-optimized-2.svg);
+}
+ #a3 {
+	 background-color: #28fdbe;
+	 background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/219932/happy-fathers-day-lettering-optimized-3.svg);
+}
+ #a4 {
+	 background-color: #fb955d;
+	 background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/219932/happy-fathers-day-lettering-optimized-4.svg);
+}
+ #a5 {
+	 background-color: #d5e4df;
+	 background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/219932/happy-fathers-day-lettering-optimized-5.svg);
+}
+ #a6 {
+	 background-color: #fc3c40;
+	 background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/219932/happy-fathers-day-lettering-optimized-6.svg);
+}
+ #a7 {
+	 background-color: #1e1cac;
+	 background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/219932/happy-fathers-day-lettering-optimized-7.svg);
+}
+ #a8 {
+	 background-color: #73ffdf;
+	 background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/219932/happy-fathers-day-lettering-optimized-8.svg);
+}
+ #a9 {
+	 background-color: #4dc68e;
+	 background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/219932/happy-fathers-day-lettering-optimized-9.svg);
+}
+ #a10 {
+	 background-color: #fdb630;
+	 background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/219932/happy-fathers-day-lettering-optimized-10.svg);
+}
+ #a11 {
+	 background-color: #d5e4df;
+	 background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/219932/happy-fathers-day-lettering-optimized-11.svg);
+}
+ #a12 {
+	 background-color: #b8e2df;
+	 background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/219932/happy-fathers-day-lettering-optimized-12.svg);
+}
+ 
