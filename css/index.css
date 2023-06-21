@@ -1,56 +1,69 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
-
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+html {
+  height: 100%;
 }
-
 body {
-    block-size: 100vh;
-    display: grid;
-    place-content: center;
-    gap: 1rem;
-    font-family: "Lato", sans-serif;
-    background-color: #efefef;
+  font-family: "Fjalla One", sans-serif;
+  background: linear-gradient(to bottom, #fc00ff 0%, #00dbde 100%);
 }
-
-.text-container {
-    display: flex;
-    justify-content: center;
-    block-size: min(10rem, 23vw);
-    min-inline-size: 22.5rem;
+.container {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: block;
+  position: absolute;
+  max-width: 225px;
 }
-
-.text-stroke {
-    font-size: 92px;
-    letter-spacing: 4px;
-    fill: none;
-    stroke: #000;
-    stroke-width: 2;
-    stroke-dasharray: 100%;
-    stroke-dashoffset: 100%;
-    animation: textStrokeAnim 4000ms linear both;
-    animation-iteration-count: 1;
+.button {
+  float: left;
+  position: relative;
+  bottom: -65px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-10deg);
+  color: #bea0ff;
+  text-transform: uppercase;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
 }
-
-@keyframes textStrokeAnim {
-    0% {
-        stroke-dasharray: 100%;
-        stroke-dashoffset: 100%;
-        fill: #0000;
-    }
-    95% {
-        stroke-dasharray: 0%;
-        stroke-dashoffset: 90%;
-        fill: #0000;
-    }
-    100% {
-        stroke-dasharray: 0%;
-        stroke-dashoffset: 0%;
-        fill: #5200ff;
-        filter: drop-shadow(2px 2px 10px #0007);
-    }
+.button span {
+  transform: skew(-10deg);
+  display: block;
+  float: left;
+  text-shadow: #2d2d2d 1px 1px, #2d2d2d 2px 2px, #2d2d2d 3px 3px,
+    #2d2d2d 4px 4px;
+}
+h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 35px;
+  margin: 0;
+  line-height: 47px;
+  letter-spacing: 2px;
+}
+.title {
+  transform: translateX(-50%) rotate(-10deg);
+  display: block;
+  float: left;
+  left: 50%;
+  position: relative;
+}
+.title span {
+  transform: skew(-10deg);
+  display: block;
+  float: left;
+  text-shadow: #2d2d2d 1px 1px, #2d2d2d 2px 2px, #2d2d2d 3px 3px,
+    #2d2d2d 4px 4px, #2d2d2d 5px 5px, #2d2d2d 6px 6px;
+  min-width: 10px;
+  min-height: 10px;
+  position: relative;
+}
+.title:nth-child(1) {
+  color: #555e89;
+}
+.title:nth-child(2) {
+  color: #5200ff;
+}
+.title:nth-child(3) {
+  color: #6f8aa6;
 }
