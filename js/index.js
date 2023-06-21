@@ -1,20 +1,25 @@
-const restartButton = document.querySelector(".reset");
+$(document).ready(function () {
+  $(".title").lettering();
+  $(".button").lettering();
+});
 
-restartButton.addEventListener(
-    "click",
-    () => {
-        const textAnimation = document.querySelector(".text-stroke");
+$(document).ready(function () {
+  animation();
+}, 1000);
 
-        setAnimationName(textAnimation, "none");
-        requestAnimationFrame(() =>
-            setTimeout(() => setAnimationName(textAnimation, ""), 0)
-        );
-    },
-    false
-);
+$(".button").click(function () {
+  animation();
+});
 
-const setAnimationName = (element, animationName) => {
-    if (element) {
-        element.style.animationName = animationName;
-    }
-};
+function animation() {
+  var title1 = new TimelineMax();
+  title1.to(".button", 0, { visibility: "hidden", opacity: 0 });
+  title1.staggerFromTo(
+    ".title span",
+    0.5,
+    { ease: Back.easeOut.config(1.7), opacity: 0, bottom: -80 },
+    { ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0 },
+    0.05
+  );
+  title1.to(".button", 0.2, { visibility: "visible", opacity: 1 });
+}
