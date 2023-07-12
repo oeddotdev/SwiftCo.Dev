@@ -1,26 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>SwiftCo Development</title>
   <link rel="stylesheet" href="css/index.css">
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<section class="container">
-  <h1>
-    <span class="title">SwiftCo</span>
-    <span class="title">Development</span>
-    <span class="title">Services</span>
-  </h1>
+  <script src="/js/index.js"></script>
 
-  <a target="_blank" href="https://on.swiftco.dev/">
-    <div class="button">Portfolio</div>
-  </a>
-</section>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js'></script>
-<script src="/js/index.js"></script>
-</body>
-</html>
+<title>SwiftList</title>
+
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL">
+  <li>Hit the gym</li>
+  <li class="checked">Pay bills</li>
+  <li>Meet George</li>
+  <li>Buy eggs</li>
+  <li>Read a book</li>
+  <li>Organize office</li>
+</ul>
