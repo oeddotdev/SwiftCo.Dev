@@ -1,69 +1,114 @@
-@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
-html {
-  height: 100%;
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
 }
-body {
-  font-family: "Fjalla One", sans-serif;
-  background: linear-gradient(to bottom, #fc00ff 0%, #00dbde 100%);
-}
-.container {
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  display: block;
-  position: absolute;
-  max-width: 225px;
-}
-.button {
-  float: left;
-  position: relative;
-  bottom: -65px;
-  left: 50%;
-  transform: translateX(-50%) rotate(-10deg);
-  color: #bea0ff;
-  text-transform: uppercase;
-  opacity: 0;
-  visibility: hidden;
-  cursor: pointer;
-}
-.button span {
-  transform: skew(-10deg);
-  display: block;
-  float: left;
-  text-shadow: #2d2d2d 1px 1px, #2d2d2d 2px 2px, #2d2d2d 3px 3px,
-    #2d2d2d 4px 4px;
-}
-h1 {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 35px;
+
+/* Remove margins and padding from the list */
+ul {
   margin: 0;
-  line-height: 47px;
-  letter-spacing: 2px;
+  padding: 0;
 }
-.title {
-  transform: translateX(-50%) rotate(-10deg);
-  display: block;
-  float: left;
-  left: 50%;
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
   position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-.title span {
-  transform: skew(-10deg);
-  display: block;
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
   float: left;
-  text-shadow: #2d2d2d 1px 1px, #2d2d2d 2px 2px, #2d2d2d 3px 3px,
-    #2d2d2d 4px 4px, #2d2d2d 5px 5px, #2d2d2d 6px 6px;
-  min-width: 10px;
-  min-height: 10px;
-  position: relative;
+  font-size: 16px;
 }
-.title:nth-child(1) {
-  color: #555e89;
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
 }
-.title:nth-child(2) {
-  color: #5200ff;
-}
-.title:nth-child(3) {
-  color: #6f8aa6;
+
+.addBtn:hover {
+  background-color: #bbb;
 }
