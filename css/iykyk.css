@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Teko&display=swap');
+@import url(https://db.onlinewebfonts.com/c/77576ff6ead1d882deb79df39f3fba90?family=Engravers%27+Old+English);
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .login-div {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+  }
+  .logo {
+    background-image: url("img/glitched_1.webp");
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    margin:0 auto;
+  }
+
+  h5 {
+    font-family: "Engravers' Old English";
+  }
+
+  h6 {
+    font-family: 'Audiowide', cursive;
+  }
+
+  .row {
+    font-family: 'Teko', sans-serif;
+  }
