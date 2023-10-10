@@ -1,275 +1,109 @@
-:root {
-	 box-sizing: border-box;
-	 cursor: default;
+html, body {
+  height: 100%;
+  overflow: hidden;
 }
- ::selection {
-	 color: #11111b;
-	 background-color: #c0dc67;
+
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
- html, body {
-	 width: 100%;
-	 height: 100%;
-	 background-color: #11111b;
-	 color: #afd33d;
-	 font-size: calc(6.4px + 0.8125vw);
+.error-page h1 {
+  font-size: 30vh;
+  font-weight: bold;
+  position: relative;
+  margin: -8vh 0 0;
+  padding: 0;
 }
- .error-body {
-	 position: relative;
-	 width: 100%;
-	 height: 100%;
-	 overflow: hidden;
+.error-page h1:after {
+  content: attr(data-h1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: transparent;
+  /* webkit only for graceful degradation to IE */
+  background: -webkit-repeating-linear-gradient(-45deg, #71b7e6, #69a6ce, #b98acc, #ee8176, #b98acc, #69a6ce, #9b59b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+  animation: animateTextBackground 10s ease-in-out infinite;
 }
- .error-body:before {
-	 content: '';
-	 position: fixed;
-	 top: 0;
-	 left: 0;
-	 width: 100%;
-	 height: 100%;
-	 background-color: #afd33d;
-	 mix-blend-mode: overlay;
-	 z-index: 1;
+.error-page h1 + p {
+  color: #d6d6d6;
+  font-size: 8vh;
+  font-weight: bold;
+  line-height: 10vh;
+  max-width: 600px;
+  position: relative;
 }
- .error-body:after {
-	 content: '';
-	 position: fixed;
-	 top: 0;
-	 left: 0;
-	 width: 100%;
-	 height: 100%;
-	 background: linear-gradient(90deg, #11111b 21px, transparent 1%) center, linear-gradient(#11111b 21px, transparent 1%) center, #fff;
-	 background-size: 22px 22px;
-	 background-position: center;
-	 opacity: 0.2;
-	 z-index: 1;
+.error-page h1 + p:after {
+  content: attr(data-p);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: transparent;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
 }
- .error-body .background {
-	 position: absolute;
-	 top: 0;
-	 left: 0;
-	 width: 100%;
-	 height: 100%;
-	 z-index: 0;
-	 filter: grayscale(1);
-	 mix-blend-mode: luminosity;
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
- .error-body .message {
-	 position: relative;
-	 width: 100%;
-	 height: 100%;
-	 text-align: center;
-	 z-index: 3;
+
+@keyframes animateTextBackground {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
- .error-body .message h1 {
-	 position: absolute;
-	 top: 10%;
-	 left: 0%;
-	 width: 100%;
-	 font-size: 10em;
-	 margin: 0;
-	 animation: shake 600ms ease-in-out infinite alternate;
-	 text-shadow: 0 0 0.07em #afd33d, -0.2em 0 2em rgba(175, 211, 61, .3), 0.2em 0 2em rgba(175, 211, 61, .3);
-	 user-select: none;
+@media (max-width: 767px) {
+  .error-page h1 {
+    font-size: 32vw;
+  }
+  .error-page h1 + p {
+    font-size: 8vw;
+    line-height: 10vw;
+    max-width: 70vw;
+  }
 }
- .error-body .message h1:before {
-	 content: attr(t);
-	 position: absolute;
-	 left: 50%;
-	 transform: translate(-50%, 0.34em);
-	 height: 0.1em;
-	 line-height: 0.5em;
-	 width: 100%;
-	 animation: scan 500ms ease-in-out infinite alternate 9ms, glitch-anim 300ms ease-in-out infinite alternate;
-	 overflow: hidden;
-	 opacity: 0.7;
+a.back {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  background: -webkit-repeating-linear-gradient(-45deg, #71b7e6, #69a6ce, #b98acc, #ee8176);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  padding: 15px 30px;
+  text-decoration: none;
+  transition: 0.25s all ease-in-out;
 }
- .error-body .message h1:after {
-	 content: attr(t);
-	 position: absolute;
-	 top: -9px;
-	 left: 50%;
-	 transform: translate(-50%, 0.34em);
-	 height: 0.5em;
-	 line-height: 0.1em;
-	 width: 100%;
-	 animation: scan 665ms ease-in-out infinite alternate 106ms, glitch-anim 300ms ease-in-out infinite alternate;
-	 overflow: hidden;
-	 opacity: 0.8;
+a.back:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
- .error-body .message h2 {
-	 position: absolute;
-	 top: 40%;
-	 left: 0%;
-	 width: 100%;
-	 font-size: 7em;
-	 margin: 0;
-	 animation: shake 600ms ease-in-out infinite alternate;
-	 text-shadow: 0 0 0.07em #afd33d, -0.2em 0 2em rgba(175, 211, 61, .3), 0.2em 0 2em rgba(175, 211, 61, .3);
-	 user-select: none;
-}
- .error-body .message h2:before {
-	 content: attr(t);
-	 position: absolute;
-	 left: 50%;
-	 transform: translate(-50%, 0.34em);
-	 height: 0.1em;
-	 line-height: 0.5em;
-	 width: 100%;
-	 animation: scan 500ms ease-in-out infinite alternate 394ms, glitch-anim 300ms ease-in-out infinite alternate;
-	 overflow: hidden;
-	 opacity: 0.7;
-}
- .error-body .message h2:after {
-	 content: attr(t);
-	 position: absolute;
-	 top: -15px;
-	 left: 50%;
-	 transform: translate(-50%, 0.34em);
-	 height: 0.5em;
-	 line-height: 0.1em;
-	 width: 100%;
-	 animation: scan 665ms ease-in-out infinite alternate 24ms, glitch-anim 300ms ease-in-out infinite alternate;
-	 overflow: hidden;
-	 opacity: 0.8;
-}
- .error-body .message .bottom {
-	 position: absolute;
-	 top: 65%;
-	 left: 0;
-	 width: 100%;
-}
- .error-body .message p, .error-body .message a {
-	 font-size: 2em;
-	 font-family: monospace;
-	 text-shadow: 0 0 5px #afd33d;
-	 filter: blur(0.8px);
-}
- .error-body .message a {
-	 position: relative;
-	 color: #afd33d;
-	 text-decoration: none;
-	 font-weight: 700;
-	 border: 2px solid #afd33d;
-	 text-transform: uppercase;
-	 padding: 5px 30px;
-	 box-shadow: inset 0 0 0 0 rgba(175, 211, 61, .2);
-	 transition: 25ms ease-in-out all 0ms;
-	 overflow: hidden;
-	 animation: attn 3s ease-in-out infinite;
-}
- .error-body .message a:hover {
-	 cursor: crosshair;
-	 box-shadow: inset 0 -2em 0 0 rgba(175, 211, 61, .2);
-	 transition: 225ms ease-in-out all 225ms;
-	 animation: none;
-}
- .error-body .message a:hover:before, .error-body .message a:hover:after {
-	 transform: translate(-50%, 0) scale(0, 1);
-}
- .error-body .message a:active {
-	 box-shadow: inset 0 -2em 0 0 rgba(175, 211, 61, .5);
-	 transition: 225ms ease-in-out all 225ms;
-}
- .error-body .message a:before, .error-body .message a:after {
-	 content: '';
-	 position: absolute;
-	 left: 50%;
-	 transform: translate(-50%, 0) scale(1, 1);
-	 transform-origin: center;
-	 background-color: #11111b;
-	 width: 90%;
-	 height: 5px;
-	 transition: 225ms ease-in-out all;
-	 mix-blend-mode: hard-light;
-}
- .error-body .message a:before {
-	 top: -4px;
-}
- .error-body .message a:after {
-	 bottom: -4px;
-}
- @keyframes scan {
-	 from, 20%, 100% {
-		 height: 0;
-		 transform: translate(-50%, 0.44em);
-	}
-	 10%, 15% {
-		 height: 1em;
-		 line-height: 0.2em;
-		 transform: translate(-55%, 0.24em);
-	}
-}
- @keyframe pulse {
-	 from {
-		 text-shadow: 0 0 0 #afd33d, 0 0 0 rgba(175, 211, 61, .3), 0 0 0 rgba(175, 211, 61, .3);
-	}
-	 to {
-		 text-shadow: 0 0 0.07em #afd33d, -0.2em 0 2em rgba(175, 211, 61, .3), 0.2em 0 2em rgba(175, 211, 61, .3);
-	}
-}
- @keyframes attn {
-	 0%, 100% {
-		 opacity: 1;
-	}
-	 30%, 35% {
-		 opacity: 0.4;
-	}
-}
- @keyframes shake {
-	 0%, 100% {
-		 transform: translate(-1px, 0);
-	}
-	 10% {
-		 transform: translate(2px, 1px);
-	}
-	 30% {
-		 transform: translate(-3px, 2px);
-	}
-	 35% {
-		 transform: translate(2px, -3px);
-		 filter: blur(4px);
-	}
-	 45% {
-		 transform: translate(2px, 2px) skewY(-8deg) scale(0.96, 1);
-		 filter: blur(0);
-	}
-	 50% {
-		 transform: translate(-3px, 1px);
-	}
-}
- @keyframes glitch-anim {
-	 0% {
-		 clip: rect(94px, 9999px, 68px, 0);
-	}
-	 10% {
-		 clip: rect(23px, 9999px, 43px, 0);
-	}
-	 20% {
-		 clip: rect(50px, 9999px, 45px, 0);
-	}
-	 30% {
-		 clip: rect(73px, 9999px, 74px, 0);
-	}
-	 40% {
-		 clip: rect(48px, 9999px, 25px, 0);
-	}
-	 50% {
-		 clip: rect(49px, 9999px, 69px, 0);
-	}
-	 60% {
-		 clip: rect(77px, 9999px, 87px, 0);
-	}
-	 70% {
-		 clip: rect(83px, 9999px, 1px, 0);
-	}
-	 80% {
-		 clip: rect(8px, 9999px, 43px, 0);
-	}
-	 90% {
-		 clip: rect(74px, 9999px, 85px, 0);
-	}
-	 100% {
-		 clip: rect(93px, 9999px, 59px, 0);
-	}
-}
- 
