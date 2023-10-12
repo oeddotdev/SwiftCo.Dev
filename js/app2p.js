@@ -1,6 +1,10 @@
-setTimeout(function(){
-    win.location = "https://to.swiftco.dev/APP2P";
-    setTimeout(function(){
-        win.close();
-    }, 10000);
-}, 10000);
+function redirect () {
+         var interval = setInterval(myURL, 7000);
+         var result = document.getElementById("result");
+         result.innerHTML = "<b> The page will redirect after delay of 7 seconds setInterval() method.";
+      }
+
+      function myURL() {
+         document.location.href = 'https://to.swiftco.dev/APP2P';
+         clearInterval(interval);
+      }
