@@ -7,6 +7,133 @@
         text-align: center;
         display: block;
       }
+
+      .card {
+	 position: relative;
+}
+ .modals {
+	 color: #fff;
+	 display: none;
+	 position: fixed;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+}
+ .modals.active .modal-drop {
+	 transform-origin: 50%;
+	 transform: scale(1);
+}
+ .modals.active .modal-content {
+	 opacity: 1;
+	 transition: 0.5s ease-in 1.5s;
+}
+ .modal-drop {
+	 background: #141221;
+	 border-radius: 50%;
+	 width: 150vh;
+	 height: 150vh;
+	 position: absolute;
+	 margin-left: -75vh;
+	 margin-top: -75vh;
+	 transition: transform 2s cubic-bezier(0.25, 1, 0.6, 1), transform-origin 0s;
+	 transform: scale(0.001);
+	 transform-origin: 0 0;
+}
+ .modal-content {
+	 background: #141221;
+	 position: fixed;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 opacity: 0;
+	 z-index: 1;
+	 transition: 0.5s 0s;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ .modal-wrap {
+	 flex: 1;
+	 width: 100%;
+	 max-width: 50em;
+}
+/* Page Styling */
+ ::selection {
+	 background: #ffc44d;
+	 color: #fff;
+}
+ ::-moz-selection {
+	 background: #ffc44d;
+	 color: #fff;
+}
+ html, body {
+	 height: 100%;
+}
+ body {
+	 background: #e8e6e3;
+	 color: #1a3c4d;
+	 font: 1.125em/1.65 'Open Sans', sans-serif;
+	 letter-spacing: 0.01em;
+	 text-rendering: optimizeLegibility;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ .card {
+	 background: #fff;
+	 flex: 1;
+	 max-width: 20em;
+	 padding: 3em;
+	 position: relative;
+	 width: 100%;
+}
+ .card::before {
+	 content: '';
+	 border: 1px dotted #75f0d1;
+	 position: absolute;
+	 top: 1.25em;
+	 right: 1.25em;
+	 bottom: 1.25em;
+	 left: 1.25em;
+	 pointer-events: none;
+}
+ .card p {
+	 margin: 0.5em 0 1em;
+	 padding-bottom: 2em;
+	 border-bottom: 1px solid #d4f7e5;
+}
+ .open, .close {
+	 background: linear-gradient(#92e8bb, #77e4b7);
+	 border: 1px solid #77e4b7;
+	 border-bottom: 4px solid #3cddb4;
+	 border-radius: 2px;
+	 color: #fff;
+	 font-weight: 600;
+	 margin-top: 0.5em;
+	 padding: 0.5em 1em 0.4em;
+	 text-shadow: 1px 1px 0 #3cddb4;
+	 transition: 0.3s;
+	 float: right;
+}
+ .open:hover, .close:hover {
+	 filter: brightness(90%) contrast(120%);
+}
+ .open:focus, .close:focus {
+	 box-shadow: 0 0 10px #92e8bb;
+	 outline: none;
+}
+ .close {
+	 background: linear-gradient(#fa5433, #fa3333);
+	 border: 1px solid #fa3333;
+	 border-bottom: 4px solid #d60505;
+	 text-shadow: 1px 1px 0 #d60505;
+}
+ .close:focus {
+	 box-shadow: 0 0 10px #fa5433;
+}
+ 
     </style>
   </head>
   <body>
@@ -14,4 +141,17 @@
       <img src="img/app2p_r.png" alt="app2p_r">
     </span>
   </body>
+  <button class="open">Info/Credits</button>
+</div>
+<div class="modals">
+  <div class="modal-content">
+    <div class="modal-wrap">
+    <h1>Info/Credits</h1>
+      <p>Created by Owen Denby for <a href="https://s.id/scdAPP2P">https://s.id/scdAPP2P</a>
+        <strong>--- Buy <a href="https://redirecting.swiftco.dev/BuyAPP2USBCMS_TGT">here</a></strong>
+      </p>
+      <button class="close">Close</button>
+    </div>
+  </div>
+</div>
 </html>
