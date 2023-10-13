@@ -5,6 +5,6 @@ window.onload = function redirect () {
       }
 
       function myURL() {
-         document.location.href = 'https:///via.swiftco.dev/BuyAPP2USBCMS_TGT';
+         document.location.href = 'https://via.swiftco.dev/BuyAPP2USBCMS_TGT';
          clearInterval(interval);
       }
