@@ -5,6 +5,6 @@ window.onload = function redirect () {
       }
 
       function myURL() {
-         document.location.href = 'https://to.swiftco.dev/APP2P';
+         document.location.href = 'https://pitch.swiftco.dev/airpodspro2-soon.html';
          clearInterval(interval);
       }
